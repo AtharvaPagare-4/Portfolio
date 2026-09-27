@@ -68,8 +68,33 @@ color: white;
 #hero {
 min-height: 90vh;
 display: flex;
+align-items: center;
+}
+
+.hero-content {
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+gap: 60px;
+width: 100%;
+}
+
+.hero-text {
+display: flex;
 flex-direction: column;
-justify-content: center;
+}
+
+.hero-image {
+flex-shrink: 0;
+}
+
+.hero-image img {
+width: 260px;
+height: 260px;
+object-fit: cover;
+border-radius: 50%;
+border: 2px solid #333;
 }
 
 #hero p:first-child {
@@ -311,6 +336,16 @@ color: white;
 
 @media (max-width: 768px) {
 
+.hero-content {
+    flex-direction: column-reverse;
+    gap: 30px;
+    text-align: center;
+}
+
+.hero-image img {
+    width: 160px;
+    height: 160px;
+}
 
 section {
     padding: 70px 6%;
